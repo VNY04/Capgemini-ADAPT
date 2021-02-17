@@ -2,3 +2,6 @@
 
 alter session set current_schema=bank;
 SET heading OFF;
+select trans_dt,substr(trans_desc,0,20),trans_amt 
+from bank_transaction
+where trans_type = 'CR' and trans_dt >= '01-JUNE-2010' and trans_dt <= '30-JUNE-2010';
